@@ -18,10 +18,7 @@ def login():
         redirect(URL('home','dashboard'))
     
     else:
-        print("None found")
-        session['flash'] = 'Failed!'
-
-
+        print("No user found")
 
     return dict()
 
@@ -41,4 +38,5 @@ def register():
     #     if not check_user:
     #         new_user_sql = f"INSERT INTO users (user_id, name, email, password) VALUES ('{user_id}','{name}','{email}','{password}');"
     #         db.executesql(new_user_sql, as_dict = True)
-    return 'registering'
+    # return 'registering'
+    return dict()
