@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover-to-Expand Sidebar</title>
+    <title>Welcome!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap');
+         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -166,9 +169,9 @@
         <div class="menu">
             <h3>Main Menu</h3>
             <ul>
-                <li><a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="[[=URL('home/dashboard')]]"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
                 <li><a href="#"><i class="fas fa-book"></i> <span>Courses</span></a></li>
-                <li><a href="#"><i class="far fa-chart-bar"></i> <span>Progress</span></a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> <span>Progress</span></a></li>
             </ul>
             <h3>Preferences</h3>
             <ul>
@@ -180,8 +183,9 @@
 
         <div class="profile">
             <img src="https://via.placeholder.com/40" alt="Profile">
-            <span>John Doe</span>
-            <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            <!-- <img src="[[=URL('static', 'images/user.jpg')]]" alt="Profile" > -->
+            <span>[[=user_name]]</span>
+            <a href="[[=URL('auth/login')]]" class="logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
 
