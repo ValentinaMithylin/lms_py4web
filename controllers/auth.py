@@ -27,6 +27,9 @@ def login():
 @action('auth/register')
 @action.uses('register.html')
 def register():
+    # email = request.POST.get('user_email')
+    # password = request.POST.get('user_pass')
+
     # if str(email) != '' and str(password) != '': 
     #     check_user_sql = f"SELECT * FROM users WHERE email = '{email}' LIMIT 0, 1;"
     #     check_user = db.executesql(check_user_sql, as_dict = True)
