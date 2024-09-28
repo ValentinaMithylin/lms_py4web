@@ -5,7 +5,7 @@ from ..models.connect_db import db
 # from ..controllers import home
 
 
-@action('login')
+@action('auth/login')
 @action.uses('login.html')
 def login():
     email = request.POST.get('user_email')
@@ -24,7 +24,7 @@ def login():
 
 
 
-@action('register')
+@action('auth/register')
 @action.uses('register.html')
 def register():
     # if str(email) != '' and str(password) != '': 
