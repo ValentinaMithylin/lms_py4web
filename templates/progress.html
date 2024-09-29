@@ -1,4 +1,42 @@
 [[extend 'layout.html']]
 
+<style>
+    /* Container for the progress bar */
+    .progress-container {
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 25px;
+        padding: 5px;
+        margin: 20px 0;
+    }
+
+    /* Actual progress bar */
+    .progress-bar {
+        height: 20px;
+        width: 50%; /* This controls the progress, set it dynamically */
+        background-color: #76c7c0;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+    }
+</style>
+
+<script>
+    function updateProgressBar(percentage) {
+        const progressBar = document.getElementById("progressBar");
+        progressBar.style.width = percentage + "%";
+    }
+
+    // Example: Update the progress to 70%
+    updateProgressBar(70);
+</script>
+
+
 <h1>Welcome to the Progress Section</h1>
 <p>This is the progress page.</p>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
