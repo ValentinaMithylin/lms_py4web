@@ -1,21 +1,170 @@
 [[extend 'layout.html']]
 
 <style>
+    .card-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+
     .card {
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-image {
+        height: 100px;
+        background-color: #e0baff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* .card {
         background-color: rgb(170, 207, 195);
         height: 170px;
         width: 170px;
         border: 1px solid black;
         border-radius: 10px;
         margin-top: 20px;
+    } */
+    .progress-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .progress-circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: relative;
+        background-color: #fff;
+        border: 6px solid #e5e5e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-circle.green {
+        border-color: #83c486; /* Green */
+    }
+
+    .progress-circle.yellow {
+        border-color: #fff6a9; /* Yellow */
+    }
+
+    .progress-circle.red {
+        border-color: #f78178; /* Red */
+    }
+
+    .progress-circle.blue {
+        border-color: #72b7f0; /* Blue */
+    }
+
+    .inner-circle {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inner-circle h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .inner-circle p {
+        font-size: 12px;
+        color: #555;
     }
 </style>
 
 <h1>Welcome to the Dashboard</h1>
 <p>Main content goes here.</p>
 
-<div class="info-container">
+<div class="card-container">
     <div class="card">
-        
+        <div class="card-image"></div>
+        <div class="card-content">
+            <h3>Title 1</h3>
+            <p>Some description text here.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image"></div>
+        <div class="card-content">
+            <h3>Title 2</h3>
+            <p>Some description text here.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image"></div>
+        <div class="card-content">
+            <h3>Title 3</h3>
+            <p>Some description text here.</p>
+        </div>
     </div>
 </div>
+
+
+<!-- <div class="progress-container">
+    <div class="progress-circle green">
+        <div class="inner-circle">
+            <h2>47</h2>
+            <p>Placeholder text lorem ipsum dolor</p>
+        </div>
+    </div>
+    <div class="progress-circle yellow">
+        <div class="inner-circle">
+            <h2>4.84</h2>
+            <p>Placeholder text lorem ipsum dolor</p>
+        </div>
+    </div>
+    <div class="progress-circle red">
+        <div class="inner-circle">
+            <h2>6</h2>
+            <p>Placeholder text lorem ipsum dolor</p>
+        </div>
+    </div>
+    <div class="progress-circle blue">
+        <div class="inner-circle">
+            <h2>45k+</h2>
+            <p>Placeholder text lorem ipsum dolor</p>
+        </div>
+    </div>
+</div> -->
